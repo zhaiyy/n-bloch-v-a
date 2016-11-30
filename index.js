@@ -4,8 +4,8 @@ var app = express();
 var indexRouter = require('./routes/index');
 var userRouter = require('./routes/users');
 
-ap.set('view', path.join(__dirname,'view'));
-ap.set('view engine', 'ejs');
+app.set('views', path.join(__dirname,'view'));
+app.set('view engine', 'ejs');
 
 app.use('/', indexRouter);
 app.use('/users', userRouter);

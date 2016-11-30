@@ -1,13 +1,13 @@
-/**
- * Created by zhaiyingying on 2016/11/30.
- */
+var path = require('path');
 var express = require('express');
 var app = express();
 var indexRouter = require('./routes/index');
 var userRouter = require('./routes/users');
 
-app.get('/',indexRouter)
-app.get('/users',userRouter)
+ap.set('view', path.join(__dirname,'view'));
+ap.set('view engine', 'ejs');
+
+app.use('/', indexRouter);
+app.use('/users', userRouter);
 
 app.listen(3000);
-

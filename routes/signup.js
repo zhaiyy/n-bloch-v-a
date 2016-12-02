@@ -7,7 +7,7 @@ var router = express.Router();
 var checkNotLogin = require('../middleware/check').checkNotLogin;
 
 router.get('/',checkNotLogin,function (req,res,next) {
-    res.send(req.flash());
+    res.render('signup')
 });
 
 router.post('/',checkNotLogin,function (req,res,next) {

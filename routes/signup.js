@@ -1,7 +1,7 @@
 /**
  * Created by zhaiyingying on 2016/11/30.
  */
-var paht = require('path');
+var path = require('path');
 var sha1 = require('sha1');
 var express = require('express');
 var router = express.Router();
@@ -17,7 +17,7 @@ router.post('/',checkNotLogin,function (req,res,next) {
     var name = req.fields.name;
     var gender = req.fields.gender;
     var bio = req.fields.bio;
-    var avatar = req.files.avatar.path.split(path,sep).pop();
+    var avatar = req.files.avatar.path.split(path.sep).pop();
     var password= req.fields.password;
     var repassword = req.fields.repassword;
 
@@ -61,7 +61,7 @@ router.post('/',checkNotLogin,function (req,res,next) {
             delete user.password;
             req.session.user=user;
             req.flash('success','注册成功');
-            req.redirect('/posts');
+            res.redirect('/posts');
         })
         .catch(function (e) {
             if(e.message.match('E11000 duplicate key')){

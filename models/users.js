@@ -3,7 +3,7 @@
  */
 var User=require('../lib/mongo').User;
 
-model.exports = {
+module.exports = {
     create:function (user) {
         return User.create(user).exec();
     }

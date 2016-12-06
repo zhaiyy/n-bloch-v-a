@@ -38,7 +38,7 @@ module.exports = {
         }
         return Post
             .find(query)
-            .populate({path :' author',model:'User'})
+            .populate({path :'author',model:'User'})
             .sort({_id:-1})
             .addCreatedAt()
             .contentToHtml()

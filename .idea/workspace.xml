@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa59defd-8241-4770-af93-2d6d7c4f05e6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/edit.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/posts.js" afterPath="$PROJECT_DIR$/models/posts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/mongo.js" afterPath="$PROJECT_DIR$/lib/mongo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/posts.js" afterPath="$PROJECT_DIR$/routes/posts.js" />
     </list>
     <ignored path="n-blog.iws" />
@@ -31,8 +30,8 @@
       <file leaf-file-name="posts.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/posts.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="3" selection-end-column="4" />
+            <state relative-caret-position="68">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -51,8 +50,8 @@
       <file leaf-file-name="mongo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/mongo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+            <state relative-caret-position="442">
+              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
               <folding>
                 <element signature="e#0#48#0" expanded="false" />
               </folding>
@@ -73,8 +72,8 @@
       <file leaf-file-name="posts.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/posts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+            <state relative-caret-position="117">
+              <caret line="42" column="25" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -93,8 +92,8 @@
       <file leaf-file-name="posts.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/posts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="187">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -144,10 +143,10 @@
         <option value="$PROJECT_DIR$/views/components/post-content.ejs" />
         <option value="$PROJECT_DIR$/views/post.ejs" />
         <option value="$PROJECT_DIR$/views/edit.ejs" />
+        <option value="$PROJECT_DIR$/models/posts.js" />
+        <option value="$PROJECT_DIR$/views/posts.ejs" />
         <option value="$PROJECT_DIR$/lib/mongo.js" />
         <option value="$PROJECT_DIR$/routes/posts.js" />
-        <option value="$PROJECT_DIR$/views/posts.ejs" />
-        <option value="$PROJECT_DIR$/models/posts.js" />
       </list>
     </option>
   </component>
@@ -435,12 +434,12 @@
       <option name="presentableId" value="Default" />
       <updated>1480484348903</updated>
       <workItem from="1480484350654" duration="27900000" />
-      <workItem from="1481007546748" duration="6635000" />
+      <workItem from="1481007546748" duration="7813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34535000" />
+    <option name="totallyTimeSpent" value="35713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="14" width="1280" height="773" extended-state="6" />
@@ -736,16 +735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/mongo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#48#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/components/post-content.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -762,26 +751,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/posts.ejs">
+    <entry file="file://$PROJECT_DIR$/models/posts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="3" selection-end-column="4" />
+        <state relative-caret-position="117">
+          <caret line="42" column="25" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/posts.js">
+    <entry file="file://$PROJECT_DIR$/lib/mongo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="38" column="19" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="19" />
+        <state relative-caret-position="442">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/posts.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/posts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="187">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding />
         </state>
       </provider>

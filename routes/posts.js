@@ -10,13 +10,14 @@ var checkLogin = require('../middleware/check').checkLogin;
 router.get('/',function (req,res,next) {
     var author = req.query.author;
 
-    PostModel.getPosts(author)
-        .then(function (posts) {
+   PostModel.getPosts(author)
+      .then(function (posts) {
             res.render('posts',{
                 posts:posts
             });
         })
         .catch(next);
+
 });
 
 router.get('/create',checkLogin,function (req,res,next) {
@@ -68,6 +69,7 @@ router.get('/:postId',function (req,res,next) {
             if(!post){
                 throw new Error('该文章不存在')
             }
+            console.log(post)
             res.render('post',{
                 post:post
             });

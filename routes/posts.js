@@ -5,6 +5,7 @@ var express = require('express');
 var router = express.Router();
 
 var PostModel = require('../models/posts')
+var CommentModel = require('../models/comments')
 var checkLogin = require('../middleware/check').checkLogin;
 
 router.get('/',function (req,res,next) {
@@ -62,16 +63,19 @@ router.get('/:postId',function (req,res,next) {
 
     Promise.all([
         PostModel.getPostById(postId),
-        PostModel.incPv(postId)
+        CommentModel.getComments(postId),
+        PostModel.incPv(postId),
     ])
         .then(function (result) {
             var post =result[0];
+            var comments =result[1];
             if(!post){
                 throw new Error('该文章不存在')
             }
             console.log(post)
             res.render('post',{
-                post:post
+                post:post,
+                comments:comments,
             });
         })
         .catch(next)

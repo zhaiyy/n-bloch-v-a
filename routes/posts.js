@@ -7,8 +7,16 @@ var router = express.Router();
 var PostModel = require('../models/posts')
 var checkLogin = require('../middleware/check').checkLogin;
 
-router.get('/',checkLogin,function (req,res,next) {
-    res.render('posts');
+router.get('/',function (req,res,next) {
+    var author = req.query.author;
+
+    PostModel.getPosts(author)
+        .then(function (posts) {
+            res.render('posts',{
+                posts:posts
+            });
+        })
+        .catch(next)
 });
 
 router.get('/create',checkLogin,function (req,res,next) {

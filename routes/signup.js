@@ -1,5 +1,7 @@
 /**
  * Created by zhaiyingying on 2016/11/30.
+ * @file
+ * @author
  */
 var path = require('path');
 var sha1 = require('sha1');
@@ -9,16 +11,16 @@ var router = express.Router();
 var UserModel = require('../models/users');
 var checkNotLogin = require('../middleware/check').checkNotLogin;
 
-router.get('/',checkNotLogin,function (req,res,next) {
-    res.render('signup')
+router.get('/', checkNotLogin, function (req, res, next) {
+    res.render('signup');
 });
 
-router.post('/',checkNotLogin,function (req,res,next) {
+router.post('/', checkNotLogin, function (req, res, next) {
     var name = req.fields.name;
     var gender = req.fields.gender;
     var bio = req.fields.bio;
     var avatar = req.files.avatar.path.split(path.sep).pop();
-    var password= req.fields.password;
+    var password = req.fields.password;
     var repassword = req.fields.repassword;
 
     // 校验参数
@@ -41,31 +43,32 @@ router.post('/',checkNotLogin,function (req,res,next) {
         if (password !== repassword) {
             throw new Error('两次输入密码不一致');
         }
-    } catch (e) {
+    }
+    catch (e) {
         req.flash('error', e.message);
         return res.redirect('/signup');
     }
 
-    password=sha1(password);
+    password = sha1(password);
 
     var user = {
-        name:name,
-        password:password,
-        gender:gender,
-        bio:bio,
-        avatar:avatar
+        name: name,
+        password: password,
+        gender: gender,
+        bio: bio,
+        avatar: avatar
     };
     UserModel.create(user)
         .then(function (result) {
             user = result.ops[0];
             delete user.password;
-            req.session.user=user;
-            req.flash('success','注册成功');
+            req.session.user = user;
+            req.flash('success', '注册成功');
             res.redirect('/posts');
         })
         .catch(function (e) {
-            if(e.message.match('E11000 duplicate key')){
-                req.flash('error','用户名已被占用');
+            if (e.message.match('E11000 duplicate key')) {
+                req.flash('error', '用户名已被占用');
                 return res.redirect('/signup');
             }
             next(e);
@@ -73,4 +76,4 @@ router.post('/',checkNotLogin,function (req,res,next) {
 });
 
 
-module.exports=router;
+module.exports = router;

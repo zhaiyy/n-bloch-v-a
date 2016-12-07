@@ -93,6 +93,19 @@ describe('signup', function() {
                     done();
                 });
         });
+        // avatar错误的情况
+        it('wrong avatar', function(done) {
+            agent
+                .post('/signup')
+                .type('form')
+                .field({ name: 'aaa11', gender: 'm', bio: 'q'})
+                .redirects()
+                .end(function(err, res) {
+                    if (err) return done(err);
+                    assert(res.text.match(/个人简介请限制在 1-30 个字符/));
+                    done();
+                });
+        });
         // 密码错误的情况
         it('wrong password', function(done) {
             agent

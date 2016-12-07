@@ -1,5 +1,7 @@
 /**
  * Created by zhaiyingying on 2016/11/30.
+ * @file
+ * @author
  */
 var sha1 = require('sha1');
 var express = require('express');
@@ -35,4 +37,4 @@ router.post('/', checkNotLogin, function (req, res, next) {
 });
 
 
-module.exports=router;
+module.exports = router;

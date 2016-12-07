@@ -1,0 +1,15 @@
+{
+    "files": [],
+    "eslint": {
+     "env": {
+                "es6": false
+            },
+            "rules": {
+                "no-console": 0
+            }},
+    "csshint": {},
+    "htmlcs": {},
+    "jformatter": {},
+    "esformatter": {},
+    "csscomb": {}
+}

@@ -14,4 +14,9 @@ module.exports = function (app) {
             res.render('404')
         }
     });
+    app.use(function (err,req,res,next) {
+        res.render('error',{
+            error:err
+        })
+    });
 }
